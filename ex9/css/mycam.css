@@ -1,0 +1,14 @@
+/* videoタグをかこむdivタグ */
+#div-video{
+    background-color:hsl(300, 54%, 44%);
+}
+
+/* キャプチャが描画されるcanvasを囲むdiv*/
+#div-cap{
+    background-color: #282;
+}
+
+/* 変換画像が描画されるcanvasを囲むdiv */
+#div-conv{
+    background-color: #159;
+}

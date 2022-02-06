@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset=" utf-8 " />
+    <title>第9回マルチメディア</title>
+    <link rel="stylesheet" href="./css/mycam.css " />
+  </head>
+
+  <body>
+    <h1>課題９：映像のキャプチャと変換</h1>
+    <h1>WebCam映像のキャプチャと変換</h1>
+    <h2>WebCamera: videoタグによる映像取得</h2>
+    <!-- WebCamera -->
+    <div id="div-video">カメラ映像をvideoタグで取得して表示する領域①
+      <video id="webcam-video" width="480" height="320" autoplay>
+        <!-- HTML5からユーザ環境への配慮 -->
+        <p>映像の再生には、videoタグをサポートしたブラウザが必要です.</p>
+      </video>
+    </div>
+    <!-- WebCameraのキャプチャ（静止画）を描画する要素:canvasタグ -->
+    <h2>WebCamキャプチャ：canvasタグによる表示</h2>
+    <div id="div-cap">
+      <canvas id="camcap-canvas" width="480" height="320"></canvas>
+    </div>
+
+    <form id="bttnform">
+      <input type="button" id="capBtn" value="Capture" />
+      <input type="button" id="convBtn" value="Convert" />
+      <label for="select-bit">再量子化数選択</label>
+      <select size="1" name="" id="select-bit" >
+        <option value="choice" disabled>再量子化数を選択してください</option>
+        <option value="2" selected>再量子化数：２</option>
+        <option value="4">再量子化数：４</option>
+        <option value="8">再量子化数：８</option>
+        <option value="16">再量子化数：１６</option>
+      </select>
+    </form>
+
+    <h2>キャプチャ画像を画像変換して表示する領域⑤：canvasタグによる表示</h2>
+    <br />
+    <div id="div-conv">
+      <canvas id="convert-canvas" width="480" height="320"></canvas>
+    </div>
+
+    <!-- WebCamera取得と画像処理のJavaScript呼び出し   -->
+    <script type="text/javascript " src="./js/ex9.js "></script>
+    <script type="text/javascript " src="./js/update.js "></script>
+
+  </body>
+</html>
